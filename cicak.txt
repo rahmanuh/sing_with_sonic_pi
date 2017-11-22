@@ -1,0 +1,97 @@
+# Welcome to Sonic Pi v3.0.1
+# Cicak cicak di dinding
+
+live_loop :cicak do
+  play chord(:C, :major), release:4, amp:2
+  use_synth :dsaw
+  play 67
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 67
+  cue :roll
+  sleep 1
+  
+  play chord(:G, :major), release:3, amp:2
+  play 65
+  sleep 0.5
+  play 62
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play chord(:C, :major), release:1, amp:2
+  play 64
+  cue :roll
+  sleep 1
+  
+  play chord(:F, :major), release:4, amp:2
+  play 69
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 71
+  sleep 0.5
+  play 72
+  sleep 1
+  
+  play chord(:G, :major), release:2, amp:2
+  play 72
+  cue :ces
+  sleep 1
+  play 64
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play chord(:G, :major), release:1, amp:2
+  play 65
+  sleep 0.5
+  play 62
+  sleep 0.5
+  play chord(:C, :major), release:1, amp:2
+  play 60
+  cue :roll
+  sleep 1
+end
+
+live_loop :beats do
+  sleep 0.25
+  sample :elec_chime, amp: 3
+  sample :bd_haus, amp: 3
+  sleep 0.25
+  sample :bd_tek, amp: 3
+end
+
+live_loop :roll do
+  sync :roll
+  sample :drum_snare_hard, amp: 3
+  sleep 0.1
+  sample :drum_snare_hard, amp: 3
+end
+
+live_loop :ces do
+  sync :ces
+  sample :elec_cymbal, amp: 3
+  sample :drum_splash_hard, amp: 3
+end
+
+
