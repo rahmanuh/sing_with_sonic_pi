@@ -1,0 +1,128 @@
+# Welcome to Sonic Pi v3.0.1
+
+live_loop :song do
+  # Selamat ulang tahun
+  play 67
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 67
+  sleep 0.75
+  play 64
+  sleep 0.25
+  play 72
+  sleep 0.5
+  play 72
+  sleep 0.5
+  play 72
+  sleep 1
+  
+  # Kami ucapkan
+  play 72
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 62, sustain: 1
+  sleep 2
+  
+  # Selamat panjang umur
+  play 65
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 65
+  sleep 0.75
+  play 62
+  sleep 0.25
+  play 71
+  sleep 0.5
+  play 71
+  sleep 0.5
+  play 71
+  sleep 0.75
+  
+  # kita kan doakan
+  play 69
+  sleep 0.25
+  play 67
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 64, sustain: 1
+  sleep 2
+  
+  # Selamat sejahtera
+  play 67
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 67
+  sleep 0.75
+  play 64
+  sleep 0.25
+  play 72
+  sleep 0.5
+  play 72
+  sleep 0.5
+  play 72
+  sleep 1
+  
+  # Sehat sentosa
+  play 72
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 60
+  sleep 0.5
+  play 69, sustain: 1
+  sleep 2
+  
+  # Selamat panjang umur
+  play 69
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 69
+  sleep 0.5
+  play 72
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 67
+  sleep 0.5
+  play 67
+  sleep 1
+  
+  # dan bahagia
+  play 67
+  sleep 0.5
+  play 65
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 62
+  sleep 0.5
+  play 60, sustain: 1, release: 0.5
+  sleep 1.5
+end
+
+live_loop :amen_break do
+  use_bpm 60
+  with_fx :slicer, phase: 0.25, wave: 1, mix: 1 do
+    sample :loop_amen, beat_stretch: 2, cutoff: 120, amp: 3
+  end
+  sleep 2
+end
+
+
+
